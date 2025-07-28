@@ -1,4 +1,4 @@
-# 📘 HTTP GET Request Basics: Examples + NotesDeep Dive
+# 📘 HTTP GET Request Response Basics: Examples + Notes
 
 Explores raw HTTP GET requests and responses intercepted while browsing [httpbin.org](http://httpbin.org) via BurpSuite proxy intercept. We'll examine two real examples:
 
