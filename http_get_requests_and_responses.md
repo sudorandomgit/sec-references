@@ -55,7 +55,7 @@ Priority: u=0, i
 	- Evade basic WAF filters
 	- Impersonate other devices (e.g, iPhone, Googlebot).
 
-**Q: What is Gecko?** → rendering engine used by Firefox. 
+**Q: What is Gecko?** → rendering engine used by Firefox. Use [DeviceAtlas](https://deviceatlas.com/blog/list-of-user-agent-strings) to find common spoof strings.
 
 `Accept: text/html,...;q=0.9,*/*;q=0.8`
 
@@ -73,12 +73,12 @@ Priority: u=0, i
 
 `Accept-Encoding: gzip, deflate, br`
 
-* Indicates acceptable compression formats.
+* Indicates acceptable compression formats. 
 * `gzip` is most common. `br` is Brotli (more efficient), common on modern sites.
 * Server will compress response if able.
 * You can modify or remove this to force an uncompressed response.
 
-**Q: What happens if we recieve content in other encoding?** → Browser will reject it. 
+**Q: What happens if we recieve content in other encoding?** → Anything not listed is rejected.
 
 **Q: What happens if omit this header?** →  Any content-coding is considered acceptable by the user agent. In practice however, it seems like most commonly used servers (e.g. Apache, nginx) will not do this, and will send an uncompressed response if the field is omitted. 
 
@@ -244,8 +244,11 @@ Via: HTTP/1.1 m_proxy_che2
 <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 ```
 
-
 ### 🔍 Request Breakdown:
+
+**Q: Why was **`/favicon.ico`** requested?** → Browsers auto-request this file to display a tab icon. It’s not user-triggered.
+
+**Q: What is a favicon?** → Short for “favorite icon.” Place a `favicon.ico` file in your site root to use it, or declare a different icon in HTML.
 
 `GET /favicon.ico HTTP/1.1`
 
@@ -421,5 +424,4 @@ This isn’t the end of understanding HTTP — it’s the beginning. Once you're
 Keep watching the wire. Your browser’s doing 50 things in the background, and the server is guessing what you mean based on this very request.
 
 Next up: GET parameters, query strings, or custom header tampering.
-
 Let’s build this into a series. Next up: POST requests and form manipulation?
