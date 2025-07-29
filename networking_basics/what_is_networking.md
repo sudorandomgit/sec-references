@@ -45,3 +45,8 @@ I'm assuming protocols like **ARP** and **TCP/IP** existed first, making device-
 - [ ] I understand the basics of what a network is  
 - [x] I understand the internet as a scaled-up network of networks  
 - [ ] Still fuzzy on the infrastructure behind web access and search
+
+## Related stuff:
+- network types - PAN, LAN, MAN, WAN
+- devices - Router, switch, hub, modem, access point
+- protocols - ARP, IP, TCP/UDP, ICMP
