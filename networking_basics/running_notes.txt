@@ -1,0 +1,62 @@
+Okay, first, what is networking?
+Basically, any time two or more things are connected. "Connected" is vague, binding by random rope doesn't count I think. 
+So I take it to mean, connected in a way they can exchange information if need be. 
+This can apply to anything, but specifically here we are talking about devices. 
+Even though we call it computer networks, they can include, and most often do include, a lot of other devices as well.
+
+The next topic ofcourse, slides into the internet.
+The internet is a collection of a lot of small and large networks. The room mentioned tim berners-lee actually discovered the world wide web. 
+I have to assume ofcourse that lan networks and certain protocols would have come first, like ARP, the successful scaling of which gave birth to the internet. Specifically, what makes it work, who holds all this info, what are the specific kinds of networks we can expect here and 
+how my home netwrok would be different form that of an office, which would be different from that of a company, how websites are present here and how search engines work is all ??? because it wasnt discussed.
+
+Okay, next is intro to LAN.
+LAN is Local Area Network (honestly, this is what makes me believe you had to have these before the www or the internet, because how else would have little networks to connect. 
+These are very clearly small, house type connections, maybe 10 to 15 devices max. 
+The room doesnt mention a number, but I knew what a LAN is so I didnt pay much attention.
+
+Next, topologies.
+First we see ring. 
+In ring topologies, each devices is connected to the next, forming a closed loop of information flow. 
+It handles traffic well and doesnt require too much set up, but the cons are that one wire damage and everything screeches to a halt. 
+Also, it didnt mention this one, but making information pass through devices that arent the actual recipient simply cannot be wise.
+Next, Bus. In bus there is a central backbone that all devices are connected into and info flows in both directions. 
+Cheap to set up and efficient unless there is a lot of volume. Cons, easy to overload. Possibly also easy to sniff.
+Last, Star. In star all the devices connect to a switch. Everything needs to go through the switch. 
+Costlier set up, and more maintenance, but profitable in speed and reliability. However the switch itself is a bottle neck. 
+Damage and everything breaks. If it was compromised, everyone is royally screwed. But it did say that mostly switches are robust.
+It went into a single line explanation on how switches are more reliable than hubs or repeaters, but Im not sure what either of them do, for an honest comparison.
+
+My open questions here would be:
+* are there more topologies
+* what is an internet connected version of these look like?
+* which ones are absolutely not used anymore, and which others are, and where.
+* would we see such topologies on hardware boards or other non typical device-y places.
+* security relevance for these. Ive tried to add a security perspective where things were missing but one never knows what one might have missed.
+  Then we learnt about routers. Or rather didnt learn anything except their existence. Routers "route" information in the internet. One never would have guessed. But how? what it has internally , or anything I have no clue.
+
+Okay, Juicy stuff IP, MAC and ping.
+
+IP is Internet Protocol. IP addresses (the v4 ones) are 4 octets separated by decimals. 
+Each octet can go from 0 - 255 and are usually indicated in decimal, even though they would could look like xx.xx.xx.xx with each x being a hex value.
+IP is the devices "address" on a network. it can have 2 of these for internal vs external communication. 
+Public IPs have become hard to obtain (usually obtained by paying your ISP) so IPv6 is in play which is xxxx\:xxxx\:xxxx\:xxxx\:xxxx\:xxxx\:xxxx\:xxxx 
+It has 8 parts, each is twice an octet. Idk why this is IPv6, when it should be IPv8. 
+It also seems rather drastically bigger given the actual shortage faced, but I assume changing things is a pain and they dont want to do it any time soon. 
+I couldnt quickly get the actual ranges but 2^128 per double octet seems correctish.
+IP addresses per device can keep changing as long as they are unique. 
+(probably easy to spoof, harder to store permanently and would need to be updated somewhere constantly).
+How this ties into the larger internet picture isnt very clear yet.
+
+MAC addresses are a lot more static. 
+MAC is media access control, which makes it sound like the only reason it exists is to control information sharing between two devices. 
+MAC addresses or more aptly, IDs are xx\:xx\:xx\:xx\:xx\:xx six pairs of hex values. 
+First 3 pairs show the manufacturer (honestly this reminds of credit cards where as soon as you put in the first part it knows who is your carrier) 
+and the next 3 pairs are unique to the device itself. 
+I would assume it has to be hardcoded somewhere in the device and notoriously difficult to overwrite without trace. or even without suspicion. 
+But also, once leaked, useful info to retain for spoofing.
+
+Ping
+Ping is a command, can be easily found on both windows and linux, and refers to pinging an Ip or web url via ICMP protocol. 
+It sends packets, checks the time taken to do so for each and puts an average. 
+Idk what other information it could provide, or if someone would disable this for any reason. 
+Its mostly used to check if a connection to that end point exists. (innocent use case, but we all know sinister things lie in wait)
