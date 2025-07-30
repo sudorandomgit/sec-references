@@ -60,3 +60,19 @@ Ping is a command, can be easily found on both windows and linux, and refers to 
 It sends packets, checks the time taken to do so for each and puts an average. 
 Idk what other information it could provide, or if someone would disable this for any reason. 
 Its mostly used to check if a connection to that end point exists. (innocent use case, but we all know sinister things lie in wait)
+
+Subnetting
+I understand that subnets simply let you split larger networks into smaller groups, with a mask but thats about it. 
+
+ARP
+ARP, aptly named address resolution protocol (the address being resolved is actually MAC, but MARP was not too nice a name I think). This is basically an attendance system, designed to keep up with the ever changing IPs. If I needed to know to which device a particular IP belonged, I would send out an ARP request broadcasted with my mac and the IP I wanted clarified. The device which owned the IP address (rightfully, ideally) would reply back with an ARP response (not sure if this is also broadcasted) , containing its own mac + the info already present in the request (IP+ requesters mac). This info is stored away in ARP cache. All devices would have to maintain this memory. 
+- What would happen if multiple devices claimed the same IP?
+- could this cache info be requested in any way? or updated without request?
+- Could I poison the cache of a device and how long would it take for the device to notice it is out of sync with the others on the network? 
+
+DHCP
+Dynamic Host configuration protocol assigns IP addresses (which are changing, not manually assigned). 
+A system looking for one would send a discover message searching for a dhcp server on the n/w. If one exists and an IP is available, it would send back an offer. If that IP is acceptable, the device sends a request and the server send an ack. stuff I dont know:
+- Actual message structure? 
+- does the device initially broadcast the discover, if so would it be easy to spoof a response as the server itself? if not how did it know how to talk to the server to begin with?
+- what are the criteria to find an acceptable ip byt the dhcp server while offering, and the system uses what criteria to deem it okay while requesting. while Ack(nowledging) is there a time restriction placed for the expiry of the IP, if so how would that be enforced, and would the device go through this thing all over again? would it be oferred the same ip again if it was available as a preference, or is the available IP chosen randomly? I have seen dhcp settings that accept static IPs as well, could you instruct a dhcp to provide a particular device with the same ip? 
