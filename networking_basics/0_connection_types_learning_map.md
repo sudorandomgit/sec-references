@@ -13,8 +13,8 @@ _Note: This map does not cover system architecture, OSI layers, full protocol st
 
 | Topic                            | Why it Matters                                                   | Resource                                                                 |
 |----------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------------------|
-| Analog vs Digital Signals        | You can't decode RF or cables without this                        | Khan Academy – [Digital vs Analog](https://www.khanacademy.org/science/physics/light-waves)         |
-| Modulation (AM, FM, QAM, etc.)   | How data is embedded into signals                                 | YouTube: [Modulation Visualized](https://www.youtube.com/watch?v=3MghfGybD80) (Ben Eater style)     |
+| Analog vs Digital Signals        | You can't decode RF or cables without this                        | Khan Academy – [Digital vs Analog](https://www.khanacademy.org/science/grade-7-science/xa9c5124c69e541e2:wavess/xa9c5124c69e541e2:digital-signals/v/analog-vs-digital-signals)         |
+| Modulation (AM, FM, QAM, etc.)   | How data is embedded into signals                                 | YouTube: [Modulation Visualized](https://youtu.be/8e4Sf6rL3zk?si=UFOnMBKfDcCg4gOy) GfG: [Digital Modulation Techniques](https://www.geeksforgeeks.org/electronics-engineering/digital-modulation-techniques/)      |
 | Spectrum, Frequency, Bandwidth   | Frequency conflicts, throughput limits                            | Khan Academy or [IEEE RF Fundamentals](https://ieeetv.ieee.org/)                                    |
 | Signal Attenuation & Noise       | Why signals weaken, how interference works                        | GreatScott! – [Noise & EMI](https://www.youtube.com/watch?v=a7BXoB9z28Y)                            |
 | Duplex: Half, Full, Simplex      | Important for how connections behave in real time (like UART)     | Tektronix – [What is UART](https://www.tek.com/en/learning/primer/what-uart)                       |
@@ -52,8 +52,20 @@ _Note: This map does not cover system architecture, OSI layers, full protocol st
 | Ultrasonic     | Rare, used in secure pairing or location                          | [Ultrasound Data Transfer](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7010283/)       |
 
 ---
+## 🔹 Part D: Wireless Coordination and Coexistence Techniques
 
-## 🔹 Part D: Layers and Framing Concepts (Extended)
+| Concept                   | Why It Matters                                                 | Resource |
+|---------------------------|----------------------------------------------------------------|----------|
+| Modulation (QAM, PSK, FSK)| Converts binary to analog in noise-resistant ways              | [Ben Eater: Modulation](https://www.youtube.com/watch?v=3MghfGybD80) |
+| FDMA (Frequency Division) | Separates different services like Wi-Fi, LTE, Bluetooth         | [FDMA Explained](https://www.youtube.com/watch?v=Om2aGQm0sYQ) |
+| TDMA (Time Division)      | Devices take turns in time slots to avoid conflict              | [TDMA Animation](https://www.youtube.com/watch?v=l2pq1XbEhNM) |
+| CDMA / DSSS / FHSS        | Spread-spectrum: avoid jamming and overlap                      | [Spread Spectrum – Wikipedia](https://en.wikipedia.org/wiki/Spread_spectrum) |
+| CSMA/CA                   | Used in Wi-Fi to avoid collisions by "listening before speaking"| [Wi-Fi CSMA/CA](https://en.wikipedia.org/wiki/Carrier-sense_multiple_access_with_collision_avoidance) |
+| Channel Hopping           | BLE/Zigbee hop between frequencies to dodge interference        | [Frequency Hopping – Wikipedia](https://en.wikipedia.org/wiki/Frequency-hopping_spread_spectrum) |
+| Power Control             | Minimizes interference by adjusting transmit power              | Typically explained in embedded system RF tuning guides |
+
+---
+## 🔹 Part E: Layers and Framing Concepts (Extended)
 
 | Concept             | Why It Matters                                                  | Resource                                                                 |
 |---------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -67,7 +79,7 @@ _Note: This map does not cover system architecture, OSI layers, full protocol st
 
 ---
 
-## 🔹 Part E: Security Risks Per Type
+## 🔹 Part F: Security Risks Per Type
 
 | Topic                     | Why It Matters                                           | Resource                                                                 |
 |---------------------------|-----------------------------------------------------------|--------------------------------------------------------------------------|
@@ -79,7 +91,7 @@ _Note: This map does not cover system architecture, OSI layers, full protocol st
 
 ---
 
-## 🔹 Part F: Legacy or Specialized Wired Interfaces (Optional)
+## 🔹 Part G: Legacy or Specialized Wired Interfaces (Optional)
 
 | Type              | Notes                                                            |
 |-------------------|------------------------------------------------------------------|
@@ -91,7 +103,7 @@ _Note: This map does not cover system architecture, OSI layers, full protocol st
 
 ---
 
-## 🔹 Part G: What’s Next
+## 🔹 Part H: What’s Next
 
 When this map is complete, continue to:
 - 🧠 *Computer & Network Architecture Map* (CPU, memory, buses)
